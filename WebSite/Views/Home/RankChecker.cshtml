@@ -1,0 +1,16 @@
+﻿@model RankCheckerViewModel
+@{
+    ViewData["Title"] = "Проверка ранга";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Проверка ранга</h1>
+
+    <form method="post" asp-controller="RankChecker" asp-action="Check">
+        <label asp-for="SteamID"></label>
+        <input asp-for="SteamID"/>
+        <span asp-validation-for="SteamID"></span>
+
+		<button type="submit" class="btn btn-primary">Проверить ранг</button>
+    </form>
+</div>
