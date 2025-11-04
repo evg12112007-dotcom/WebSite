@@ -6,11 +6,41 @@
 <div class="text-center">
     <h1 class="display-4">Проверка ранга</h1>
 
-    <form method="post" asp-controller="RankChecker" asp-action="Check">
+    <form id="rankForm">
         <label asp-for="SteamID"></label>
-        <input asp-for="SteamID"/>
+        <input asp-for="SteamID" />
         <span asp-validation-for="SteamID"></span>
 
-		<button type="submit" class="btn btn-primary">Проверить ранг</button>
+        <button type="submit" class="btn btn-primary">Проверить ранг</button>
     </form>
+
+    <div id="result" style="margin-top:20px; color: white;"></div>
 </div>
+
+@section Scripts {
+        <script>
+            document.getElementById("rankForm").addEventListener("submit", async function (e) {
+                e.preventDefault(); // Отменяем стандартную отправку формы
+
+                const steamID = document.querySelector("[name='SteamID']").value;
+                const resultDiv = document.getElementById("result");
+
+                try {
+                    const response = await fetch("/RankChecker/Check", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ SteamID: steamID })
+                    });
+
+                    if (!response.ok) throw new Error("Ошибка запроса");
+
+                    const data = await response.json();
+                    resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                } catch (error) {
+                    resultDiv.textContent = "Произошла ошибка: " + error.message;
+                }
+            });
+        </script>
+}

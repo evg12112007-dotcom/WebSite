@@ -1,6 +1,9 @@
 ﻿using WebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Newtonsoft.Json;
+using System.Text.Json;
+using Microsoft.Extensions.Options;
 
 namespace WebSite.Controllers
 {
@@ -12,7 +15,7 @@ namespace WebSite.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Check(RankCheckerViewModel InputSteamID)
+        public async Task<IActionResult> Check([FromBody]RankCheckerViewModel InputSteamID)
         {
             if (!ModelState.IsValid)
             {
@@ -21,6 +24,7 @@ namespace WebSite.Controllers
 
             string SteamID = InputSteamID.SteamID;
             string URL = $"https://api-public.cs-prod.leetify.com/v3/profile?steam64_id={SteamID}";
+            bool HaveAccess = false;
 
             try
             {
@@ -32,22 +36,42 @@ namespace WebSite.Controllers
                     response.EnsureSuccessStatusCode();
 
                     string jsonResponse = await response.Content.ReadAsStringAsync();
-                    dynamic data = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonResponse);
+
+                    using JsonDocument document = JsonDocument.Parse(jsonResponse);
+                    JsonElement root = document.RootElement;
 
 
-                    //Пока вывожу рейтинг, потом можно поменять на другие статы (сейчас не работает, потом починю)
+                    // В строку какие категории будем дергать из JSON'а:
+                    JsonElement rating = root.GetProperty("rating");
+
+
+                    // Здесь прописываются критерии отбора
+                    if (rating.GetProperty("aim").GetDouble() >= 0.5)
+                    {
+                        Console.WriteLine("Может участвовать");
+                        HaveAccess = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Не может участвовать");
+                        HaveAccess = false;
+                    }
+
+
+                    // Объект со значениями JSON (которые можем записывать в бд, или еще куда-то)
                     var playerStats = new
                     {
-                        Aim = data.rating.aim,
-                        Positioning = data.rating.positioning,
-                        Utility = data.rating.utility,
-                        Clutch = data.rating.clutch,
-                        Opening = data.rating.opening,
-                        CTLeetify = data.rating.ct_leetify,
-                        TLeetify = data.rating.t_leetify
+                        Aim = rating.GetProperty("aim").GetDouble(),
+                        Positioning = rating.GetProperty("positioning").GetDouble(),
+                        Utility = rating.GetProperty("utility").GetDouble(),
+                        Clutch = rating.GetProperty("clutch").GetDouble(),
+                        Opening = rating.GetProperty("opening").GetDouble(),
+                        CTLeetify = rating.GetProperty("ct_leetify").GetDouble(),
+                        TLeetify = rating.GetProperty("t_leetify").GetDouble(),
+                        Access = HaveAccess  // Может ли юзер участвовать в турнире?
                     };
 
-                    return Content(jsonResponse, "application/json");
+                    return Json(playerStats);
                 }
             }
             catch (Exception ex)
