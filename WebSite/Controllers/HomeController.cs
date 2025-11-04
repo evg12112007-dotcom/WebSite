@@ -13,9 +13,9 @@ namespace WebSite.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Main()
         {
-            return View();
+            return View("Index");
         }
 
         public IActionResult Privacy()
