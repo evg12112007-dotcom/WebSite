@@ -10,36 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header id="head">
+   <header id="head">
+    <div>
         <div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <div></div><!--вертикальная линия-->
-            <details>
-                <summary>
-                    <img src="" alt="">
-                    <p></p>
-                    <input type="button" value="">
-                </summary>
-            </details>
-            <nav>
-                <ul>
-                    <li><a href="#head">Главная</a></li>
-                    <li><a href="#battle">О турнире</a></li>
-                    <li><a href="">Регистрация</a></li>
-                    <li><a href="">Расписание</a></li>
-                    <li><a href="">Турнирная сетка</a></li>
-                    <li><details><summary>Помощь</summary></details></li>
-                </ul>
-            </nav>
-    </header>
+            <img src="" alt="">
+        </div>
+        <div id="header" class="header">
+            <a id="Main" class="HeaderButton" href="head">Главная</a>
+            <a id="Tournament" class="HeaderButton" href="Battle">О турнире</a>
+            <a id="Registration" class="HeaderButton" href="">Регистрация</a>
+            <a id="Schedule" class="HeaderButton" href="">Расписание</a>
+            <a id="Grid" class="HeaderButton" href="">Турнирная сетка</a>
+            <a id="RangChecker" class="HeaderButton" href="RangChecker">Проверка ранга</a>
+            <a id="Help" class="HeaderButton" href="">Помощь</a>
+        </div>
+    </div>
+</header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             <div class="text-center">

@@ -13,7 +13,6 @@ body {
 .background_img {
     width: 100%;
 }
-/* главный экран */
 
 .head_div {
     background-color: #2A2835;
@@ -108,4 +107,93 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1000;
+}
+
+.header {
+    background-color: #2A2835;
+    color: #2A2835;
+    width: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 36px;
+    transition: transform 0.3s ease-in-out;
+}
+.header.hidden {
+    transform: translateY(-100%);
+}
+.HeaderButton {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+}
+
+
+#Schedule {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-64%);
+    color: white;
+    padding: 5px;
+}
+
+#Grid {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 45px);
+    color: white;
+    padding: 5px;
+}
+#Help {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 190px);
+    color: white;
+    padding: 5px;
+}
+
+#Registration {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 75px);
+    color: white;
+    padding: 5px;
+}
+
+#Tournament {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 350px);
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#RangChecker {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 200px);
+    color: white;
+    padding: 5px;
+}
+#Main {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 450px);
+    color: white;
+    padding: 5px;
+}
+
+
+.HeaderButton {
+    text-decoration: none;
 }
