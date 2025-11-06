@@ -1,0 +1,100 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-panel {
+    width: 100%;
+    background: #0f131e;
+    color: white;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .left-panel h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+
+#pass-recovery-text {
+    font-size: 40px;
+    margin-bottom: 30;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 16px;
+    width: 50%;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+    background: #e8e8e8;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    width: 50%;
+    align-self: center;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #e44a2d;
+    color: white;
+    transition: 0.2s ease;
+}
+
+#recovery-button {
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#terms {
+    justify-content: flex-start;
+}
+
+.action-row {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.redir-link {
+    align-self: center;
+    position: relative;
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+    .redir-link:hover {
+        opacity: 1;
+    }

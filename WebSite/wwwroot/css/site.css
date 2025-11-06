@@ -138,62 +138,37 @@ body {
 #Schedule {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 0;
     left: 50%;
     transform: translateX(-64%);
-    color: white;
-    padding: 5px;
 }
 
 #Grid {
-    position: absolute;
-    top: 0;
     left: calc(50% + 45px);
-    color: white;
-    padding: 5px;
 }
 #Help {
-    position: absolute;
-    top: 0;
     left: calc(50% + 190px);
-    color: white;
-    padding: 5px;
 }
 
 #Registration {
-    position: absolute;
-    top: 0;
     right: calc(50% + 75px);
-    color: white;
-    padding: 5px;
 }
 
 #Tournament {
-    position: absolute;
-    top: 0;
     right: calc(50% + 350px);
-    color: white;
-    text-decoration: none;
-    padding: 5px;
 }
 
 #RangChecker {
-    position: absolute;
-    top: 0;
     right: calc(50% + 200px);
-    color: white;
-    padding: 5px;
 }
 #Main {
-    position: absolute;
-    top: 0;
     right: calc(50% + 450px);
-    color: white;
-    padding: 5px;
 }
 
 
 .HeaderButton {
+    position: absolute;
+    top: 0;
+    color: white;
+    padding: 5px;
     text-decoration: none;
 }
