@@ -18,7 +18,7 @@ namespace WebSite.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult RankChecker()
         {
             return View();
         }
