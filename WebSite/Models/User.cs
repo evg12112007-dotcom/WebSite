@@ -13,6 +13,10 @@ namespace WebSite.Models
         [Key]
         public int UserID { get; set; }
 
+        public string SteamID64 { get; set; }
+
+        public string RiotPUUID { get; set; }
+
         [Required(ErrorMessage = "Имя пользователя обязательно")]
         public string Name { get; set; }
 

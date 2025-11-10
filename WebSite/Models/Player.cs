@@ -16,6 +16,12 @@ namespace WebSite.Models
         [Required(ErrorMessage = "Никнейм обязательный")]
         public string NickName { get; set; }
 
+        public int CS2SkillLevel { get; set; }
+
+        public int Dota2SkillLevel { get; set; }
+
+        public int ValorantSkillLevel { get; set; }
+
         [Required]
         public int TeamID { get; set; }
         [ForeignKey("TeamID")]

@@ -1,7 +1,6 @@
 ﻿using WebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using Newtonsoft.Json;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
 
