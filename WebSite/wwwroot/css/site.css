@@ -163,6 +163,9 @@ body {
 #Main {
     right: calc(50% + 450px);
 }
+#Account {
+    left: calc(50% + 500px)
+}
 
 
 .HeaderButton {

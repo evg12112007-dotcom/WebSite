@@ -1,0 +1,176 @@
+﻿@*
+*@
+@{
+    ViewData["Title"] = "Личный кабинет";
+}
+<link rel="stylesheet" href="~/css/HomePage.css" />
+<html>
+    <body>
+    <div class="mainContainer">
+        <div class="Mainblock">
+            <!--Профиль-->
+            <img class="userPfp" src="/img/UserPFPTemplate.png" alt="" />
+
+            <div class="block">
+                <div class="textBox" id="upperTextBox">
+                    <h2>NickName</h2>
+                    <h2>ID: 0000000</h2>
+                </div>
+                <div class="textBox">
+                    <div class="textDiv">
+                        <p class="infoText">ФИО</p>
+                        <p>Иванов Иван Иванович</p>
+                    </div>
+                    <div class="textDiv">
+                        <p class="infoText">Группа</p>
+                        <p>ИСП(9)-26-3</p>
+                    </div>
+                    <div class="textDiv">
+                        <p class="infoText">Телефон</p>
+                        <p>89*********</p>
+                    </div>
+                    <div class="textDiv">
+                        <p class="infoText">Рейтинг</p>
+                        <p>****</p>
+                    </div>
+                    <div class="textDiv">
+                        <p class="infoText">% побед</p>
+                        <p>****</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Mainblock" id="contestantBlock">
+            <!--Команда + участники-->
+            <div class="teamSection">
+                <!--Команда-->
+                <img class="userPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <div class="block">
+                    <div class="textBox">
+                        <div class="upperTextDiv" id="uTB">
+                            <h2>Название команды</h2>
+                        </div>
+
+                        <div class="upperTextDiv">
+                            <p class="infoText">Рейтинг команды</p>
+                            <p>****</p>
+                        </div>
+
+                        <div class="upperTextDiv">
+                            <p class="infoText">% Побед команды</p>
+                            <p>****</p>
+                        </div>
+                    </div>
+
+                    <div class="textBox">
+                        <div class="textDiv">
+                            <h5>Описание</h5>
+                            <p id="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamSection">
+                <!-- Участники команды -->
+                <div id="teamList">
+                    <h3>Участники команды:</h3>
+                    <h5 class="infoText">Ваша команда в 1 сетке</h5>
+                </div>
+            </div>
+            <hr width="100%">
+
+            <div class="textBox" id="contestantResults">
+                <p class="infoText" id="ContestResult">% Побед</p>
+                <p class="infoText" id="ContestResult">Рейтинг</p>
+            </div>
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+            <hr class="contestantHr">
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+            <hr class="contestantHr">
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+            <hr class="contestantHr">
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+            <hr class="contestantHr">
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+            <hr class="contestantHr">
+
+            <div class="textBox" id="contestantBox">
+                <img class="contestantPfp" src="/img/UserPFPTemplate.png" alt="" />
+                <h5 class="upperTextDiv" id="contestants">NickName (резерв)</h5>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+
+                <div class="upperTextDiv">
+                    <p>****</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

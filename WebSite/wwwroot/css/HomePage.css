@@ -1,0 +1,148 @@
+﻿.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.Mainblock {
+    margin: 25px;
+    padding: 25px;
+    display: flex;
+    align-self: center;
+    background-color: #2A2835;
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.teamSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.textBox {
+    width: 100%;
+    margin: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.textDiv {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.userPfp {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    width: auto;
+    align-self: center;
+}
+
+h2, h3, h5, p {
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.infoText {
+    color: #A1A1A1;
+}
+
+.upperTextDiv {
+    width: 15%;
+    margin-right: 30px;
+    align-self: center;
+}
+
+#upperTextBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+#uTB {
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+#description {
+    width: 500px;
+    margin-top: 10px;
+    height: auto;
+    word-break: break-all;
+}
+
+#teamList {
+    margin: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#contestantBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+#contestants {
+    width: 75%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contestantPfp {
+    width: 48px;
+    height: 48px;
+    margin-left: 50px;
+    align-self: center;
+}
+
+#contestantResults {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    margin-top: 10px;
+}
+#ContestResult {
+    margin-right: 98px;
+}
+
+.contestantHr {
+    width: 90%;
+}
+
+#contestantBox {
+    margin: 0;
+}
+
+hr {
+    color: #504e68;
+    margin: 10px;
+    align-self: center;
+}

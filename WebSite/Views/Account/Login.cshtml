@@ -1,34 +1,34 @@
-﻿@page
-@model WebSite.Views.Account.LoginModel
+﻿@*
+*@
 @{
     Layout = null;
 }
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Вход</title>
-        <link rel="stylesheet" href="~/css/account.css"/>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="left-panel">
-                <h1>Вход</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход</title>
+    <link rel="stylesheet" href="~/css/account.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-panel">
+            <h1>Вход</h1>
 
-                <form>
-                    <input autocomplete="on" type="email" placeholder="Почта" />
-                    <input autocomplete="off" type="password" placeholder="Пароль" />
+            <form>
+                <input autocomplete="on" type="email" placeholder="Почта" />
+                <input autocomplete="off" type="password" placeholder="Пароль" />
 
-                    <div class="action-row">
-                        <a href="/Account/PasswordRecovery" class="redir-link" id="forgot-password">Забыл пароль</a>
-                    </div>
+                <div class="action-row">
+                    <a href="/Account/PasswordRecovery" class="redir-link" id="forgot-password">Забыл пароль</a>
+                </div>
 
-                    <button type="submit">Войти</button>
-                    <a href="/Account/AccountCreation" class="redir-link">Зарегистрироваться</a>
-                </form>
-            </div>
-            <img src="~/img/collage.png" alt="" id="backgroundimage" />
+                <button type="submit">Войти</button>
+                <a href="/Account/SignIn" class="redir-link">Зарегистрироваться</a>
+            </form>
         </div>
-    </body>
+        <img src="~/img/collage.png" alt="" id="backgroundimage" />
+    </div>
+</body>
 </html>

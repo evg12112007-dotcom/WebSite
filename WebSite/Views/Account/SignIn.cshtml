@@ -1,0 +1,37 @@
+﻿@*
+*@
+@{
+    Layout = null;
+}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="~/css/account.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-panel">
+            <h1>Регистрация</h1>
+
+            <form>
+                <input autocomplete="on" type="email" placeholder="Почта" />
+                <input autocomplete="off" type="password" placeholder="Пароль" />
+                <input autocomplete="off" type="password" placeholder="Повторите пароль" />
+
+                <div class="action-row" id="terms">
+                    <a href="#" class="redir-link">
+                        @* Добавить ссылку на список с правилами *@
+                        Регистрируясь на сайте, я соглашаюсь с его правилами
+                    </a>
+                </div>
+
+                <button type="submit">Зарегистрироваться</button>
+                <a href="/Account/Login" class="redir-link">Уже есть аккаунт?</a>
+            </form>
+        </div>
+        <img src="~/img/collage.png" alt="" id="backgroundimage" />
+    </div>
+</body>
+</html>

@@ -13,7 +13,7 @@ namespace WebSite.Controllers
             _logger = logger;
         }
 
-        public IActionResult AccountCreation()
+        public IActionResult SignIn()
         {
             return View();
         }
@@ -26,6 +26,10 @@ namespace WebSite.Controllers
             return View();
         }
         public IActionResult PasswordRecoveryReset()
+        {
+            return View();
+        }
+        public IActionResult Home()
         {
             return View();
         }

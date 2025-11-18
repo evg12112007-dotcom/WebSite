@@ -25,15 +25,15 @@ body {
     justify-content: center;
 }
 
-    .left-panel h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-        align-self: center;
-    }
+.left-panel h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    align-self: center;
+}
 
 #pass-recovery-text {
     font-size: 40px;
-    margin-bottom: 30;
+    margin-bottom: 30px;
 }
 
 form {
@@ -95,6 +95,6 @@ button:hover {
     text-decoration: none;
 }
 
-    .redir-link:hover {
-        opacity: 1;
-    }
+.redir-link:hover {
+    opacity: 1;
+}
