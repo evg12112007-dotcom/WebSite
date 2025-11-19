@@ -10,7 +10,7 @@ namespace WebSite.Models
     public class Event
     {
         [Key]
-        public int EventID { get; set; }
+        public Guid EventID { get; set; }
 
         [Required(ErrorMessage = "Название события обязательно")]
         public string EventName { get; set; }

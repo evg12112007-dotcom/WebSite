@@ -10,7 +10,7 @@ namespace WebSite.Models
     public class Referee
     {
         [Key]
-        public int RefereeID { get; set; }
+        public Guid RefereeID { get; set; }
 
         [Required(ErrorMessage = "Имя судьи обязательно")]
         public string RefereeName { get; set; }

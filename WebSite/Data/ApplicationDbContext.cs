@@ -1,34 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
 using WebSite.Models;
 
 namespace WebSite.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext : IdentityDbContext<User, Role, Guid>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-           : base(options)
-        {
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
-
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams { get; set; }
-
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<TournamentStanding> TournamentStandings { get; set; }
-
         public DbSet<Match> Matches { get; set; }
-
         public DbSet<Referee> Referees { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<Event> Events { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
 
-            // Конфигурация для связи Match ↔ Team
+            // Конфигурация для связи Match Team
             modelBuilder.Entity<Match>()
                 .HasOne(m => m.TeamA)
                 .WithMany()

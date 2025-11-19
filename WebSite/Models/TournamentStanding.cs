@@ -11,15 +11,15 @@ namespace WebSite.Models
     public class TournamentStanding
     {
         [Key]
-        public int StandingsId { get; set; }
+        public Guid StandingsId { get; set; }
 
         [Required]
-        public int TournamentID { get; set; }
+        public Guid TournamentID { get; set; }
         [ForeignKey("TournamentID")]
         public Tournament Tournament { get; set; } 
 
         [Required]
-        public int TeamID { get; set; }
+        public Guid TeamID { get; set; }
         [ForeignKey("TeamID")]
         public Team Team { get; set; } 
 

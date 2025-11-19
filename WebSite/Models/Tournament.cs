@@ -11,18 +11,18 @@ namespace WebSite.Models
     public class Tournament
     {
         [Key]
-        public int TournamentID { get; set; }
+        public Guid TournamentID { get; set; }
 
         [Required(ErrorMessage = "Название турнира обязательно")]
         public string TournamentName { get; set; }
 
         [Required]
-        public int EventId { get; set; }
+        public Guid EventId { get; set; }
         [ForeignKey("EventId")]
         public Event Event { get; set; } 
 
         [Required]
-        public int GameId { get; set; }
+        public Guid GameId { get; set; }
         [ForeignKey("GameId")]
         public Game Game { get; set; } 
 

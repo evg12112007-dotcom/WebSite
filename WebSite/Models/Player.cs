@@ -11,7 +11,7 @@ namespace WebSite.Models
     public class Player
     {
         [Key]
-        public int PlayerId { get; set; }
+        public Guid PlayerId { get; set; }
 
         [Required(ErrorMessage = "Никнейм обязательный")]
         public string NickName { get; set; }
@@ -23,17 +23,17 @@ namespace WebSite.Models
         public int ValorantSkillLevel { get; set; }
 
         [Required]
-        public int TeamID { get; set; }
+        public Guid TeamID { get; set; }
         [ForeignKey("TeamID")]
         public Team Team { get; set; } //получить команду, в которой играет игрок
 
         [Required]
-        public int UserID { get; set; }
+        public Guid UserID { get; set; }
         [ForeignKey("UserID")]
         public User User { get; set; }
 
         [Required]
-        public int LevelID { get; set; }
+        public Guid LevelID { get; set; }
         [ForeignKey("LevelID")]
         public Level Level { get; set; }
 

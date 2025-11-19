@@ -11,24 +11,24 @@ namespace WebSite.Models
     public class Match
     {
         [Key]
-        public int MatchID { get; set; }
+        public Guid MatchID { get; set; }
 
         [Required]
-        public int TournamentID { get; set; }
+        public Guid TournamentID { get; set; }
         [ForeignKey("TournamentID")]
         public Tournament Tournament { get; set; } //информация о турнире
 
         [Required]
-        public int TeamAID { get; set; }
+        public Guid TeamAID { get; set; }
         [ForeignKey("TeamAID")]
         public Team TeamA { get; set; } //информация о команде
 
         [Required]
-        public int TeamBID { get; set; }
+        public Guid TeamBID { get; set; }
         [ForeignKey("TeamBID")]
         public Team TeamB { get; set; } //информация о команде
 
-        public int? WinnerTeamID { get; set; }
+        public Guid? WinnerTeamID { get; set; }
         [ForeignKey("WinnerTeamID")]
         public Team WinnerTeam { get; set; } //информация о команде
 

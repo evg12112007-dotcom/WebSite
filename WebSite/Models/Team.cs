@@ -10,7 +10,7 @@ namespace WebSite.Models
     public class Team
     {
         [Key]
-        public int TeamId { get; set; }
+        public Guid TeamId { get; set; }
 
         [Required(ErrorMessage = "Название команды обязательно")]
         public string TeamName { get; set; }

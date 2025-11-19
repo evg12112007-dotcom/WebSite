@@ -10,7 +10,7 @@ namespace WebSite.Models
     public class Game
     {
         [Key]
-        public int GameId { get; set;}
+        public Guid GameId { get; set;}
         [Required(ErrorMessage = "Название игры обязательно")]
         public string GameName { get; set;}
 
